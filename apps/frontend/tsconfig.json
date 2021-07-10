@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "./src/**/*.spec.ts"
+  ]
+}
