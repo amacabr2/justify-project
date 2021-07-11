@@ -20,7 +20,7 @@ const AuthForm = () => {
     const onSubmit = async (data: FormData) => {
         if (data?.email) {
             logIn(data.email, () => {
-                return history.push('/justify')
+                return history.push('/justify');
             });
         }
     };

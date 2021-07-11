@@ -5,6 +5,7 @@ import {Button} from "react-bootstrap";
 import {computeFormValidation} from "../utils/form-validation";
 import {Field} from "../components";
 import {FormApi} from "final-form";
+import {addTokenInHeader} from "../auth/api";
 
 type FormData = { text: string | null };
 
@@ -18,10 +19,10 @@ const JustifyForm: React.FC = () => {
     const onSubmit = async (data: FormData) => {
         await fetch('/api/justify', {
             method: "POST",
-            headers : {
+            headers : addTokenInHeader({
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
-            },
+            }),
             body: JSON.stringify(data),
         })
             .then(response => response.json())

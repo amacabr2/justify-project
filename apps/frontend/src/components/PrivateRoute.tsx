@@ -1,6 +1,6 @@
 import React from "react";
-import {useAuth} from "../auth";
 import {Redirect, Route} from "react-router-dom";
+import {useAuth} from "../auth";
 
 type Props = {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ type Props = {
 
 const PrivateRoute: React.FC<Props> = ({ children, path }: Props) => {
     const auth = useAuth();
-    console.log({auth});
+
     return (
         <Route
             path={path}

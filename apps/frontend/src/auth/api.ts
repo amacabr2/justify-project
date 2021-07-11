@@ -1,11 +1,11 @@
-const getToken = () => localStorage.getItem('token');
+export const getToken = () => localStorage.getItem('token');
 
-const setToken = (token: string) => {
+export const setToken = (token: string) => {
     localStorage.setItem('token', token);
     return token;
 }
 
-const login = async (email: string): Promise<string> =>
+export const login = async (email: string): Promise<string> =>
     fetch('/api/token', {
         method: "POST",
         headers : {
@@ -20,14 +20,7 @@ const login = async (email: string): Promise<string> =>
             return token;
         });
 
-const addTokenInHeader = (headers: Record<string, any>) => ({
+export const addTokenInHeader = (headers: Record<string, any>) => ({
     ...headers,
     Authorization: `Bearer ${getToken()}`,
 });
-
-export {
-    getToken,
-    setToken,
-    login,
-    addTokenInHeader,
-}
