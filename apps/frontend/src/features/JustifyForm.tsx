@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import * as Yup from "yup";
-import { Form } from "react-final-form";
+import {Form} from "react-final-form";
 import {Button} from "react-bootstrap";
 import {computeFormValidation} from "../utils/form-validation";
 import {Field} from "../components";

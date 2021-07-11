@@ -17,7 +17,13 @@ app.post('/api/justify', (req: Request, res: Response) => {
     res.json({
         error: 'ZUT',
     });
-})
+});
+
+app.post('/api/token', (req: Request, res: Response) => {
+    res.status(201).json({
+        token: 'azerty',
+    });
+});
 
 app.listen(PORT, () => console.log(`Server start on port ${PORT}!`))
 
